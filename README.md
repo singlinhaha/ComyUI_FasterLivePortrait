@@ -17,6 +17,7 @@ cd src/models/XPose/models/UniPose/ops
 python setup.py build install
 ```
 onnxruntime和tensorrt的版本取决电脑的cuda和cudnn版本。
+
 官方项目中动物模型使用的XPose作为特征点检测器，更多详细信息请参考[XPose](https://github.com/IDEA-Research/X-Pose)
 
 ## 模型转换
@@ -55,4 +56,5 @@ onnxruntime和tensorrt的版本取决电脑的cuda和cudnn版本。
 * face_index: 选中人脸编号
 * max number：允许同时驱动的最大数量
 * config：推理后端选择
+
 注：由于xpose每次只能返回一个结果，所以多人模式对于动物模型不生效

@@ -48,7 +48,7 @@ onnxruntime和tensorrt的版本取决电脑的cuda和cudnn版本。
   * `mkdir build && cd build`
   * `cmake .. -DTensorRT_ROOT=$TENSORRT_HOME`,$TENSORRT_HOME 替换成你自己TensorRT的根目录。
   * `make`，记住so文件的地址，将`scripts/onnx2trt.py`和`src/models/predictor.py`里`/opt/grid-sample3d-trt-plugin/build/libgrid_sample_3d_plugin.so`替换成自己的so路径
-* 下载Onnx文件：`huggingface-cli download warmshao/FasterLivePortrait --local-dir ./checkpoints`。将onnx模型转为tensorrt，运行`sh scripts/all_onnx2trt.sh`和`sh scripts/all_onnx2trt_animal.sh`
+* 将onnx模型转为tensorrt，运行`sh scripts/all_onnx2trt.sh`和`sh scripts/all_onnx2trt_animal.sh`
 ## 参数
 * driving_type：驱动类型，可选为["human", "animal"]
 * batch_mode: 是否开启多人模式
